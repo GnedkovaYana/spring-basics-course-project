@@ -16,7 +16,6 @@ public class App {
     private Client client;
 
     private EventLogger defaultLogger;
-
     private Map<EventType, EventLogger> loggers;
 
     private String startupMessage;
