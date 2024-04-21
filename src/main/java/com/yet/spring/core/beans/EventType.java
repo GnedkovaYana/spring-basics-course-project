@@ -5,5 +5,5 @@ public enum EventType {
 	INFO,
 	ERROR,
 	INFOBD,
-	CONSL;
+	CONSL
 }
