@@ -15,7 +15,7 @@ public class CacheFileEventLogger extends FileEventLogger {
 		this.cacheSize = cacheSize;
 		this.cache = new ArrayList<Event>(cacheSize);
 	}
-	
+
 	public void destroy() {
 		if ( ! cache.isEmpty()) {
 			writeEventsFromCache();
@@ -25,7 +25,7 @@ public class CacheFileEventLogger extends FileEventLogger {
 	@Override
 	public void logEvent(Event event) {
 		cache.add(event);
-		
+
 		if (cache.size() == cacheSize) {
 			writeEventsFromCache();
 			cache.clear();
@@ -33,7 +33,7 @@ public class CacheFileEventLogger extends FileEventLogger {
 	}
 
 	private void writeEventsFromCache() {
-	    cache.stream().forEach(super::logEvent);
+		cache.stream().forEach(super::logEvent);
 	}
 
 }

@@ -1,7 +1,7 @@
 package com.yet.spring.core.loggers;
 
 public abstract class AbstractLogger implements EventLogger {
-    
+
     private String name;
 
     @Override
